@@ -1,0 +1,32 @@
+name: Status Check
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run checks
+        # env:
+        #   BOOKING_API_TOKEN: ${{ secrets.BOOKING_API_TOKEN }}
+        run: node scripts/check.js
+
+      - name: Commit status.json
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: update status.json'
+          file_pattern: status.json

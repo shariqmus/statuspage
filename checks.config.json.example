@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "name": "Museum Website",
+      "url": "https://museum.example.ae",
+      "method": "GET",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Ticket API Health",
+      "url": "https://api.example.ae/health",
+      "method": "GET",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Booking Save API",
+      "url": "https://api.example.ae/booking/save",
+      "method": "POST",
+      "expectedStatus": 200,
+      "body": { "test": true },
+      "expectedBodyField": "status",
+      "expectedBodyValue": "success",
+      "authEnv": "BOOKING_API_TOKEN"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Museum Services Status</title>
+<style>
+  body { font-family: system-ui, sans-serif; background: #0d1117; color: #e6edf3; margin: 0; padding: 40px; }
+  h1 { text-align: center; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; max-width: 900px; margin: 40px auto; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px; }
+  .card h3 { margin: 0 0 8px 0; }
+  .badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+  .operational { background: #238636; color: white; }
+  .degraded { background: #9e6a03; color: white; }
+  .down { background: #da3633; color: white; }
+  .meta { font-size: 12px; color: #8b949e; margin-top: 8px; }
+  #updated { text-align: center; color: #8b949e; margin-top: 20px; font-size: 13px; }
+</style>
+</head>
+<body>
+<h1>Museum Services Status</h1>
+<div class="grid" id="grid"></div>
+<div id="updated"></div>
+<script src="app.js"></script>
+</body>
+</html>

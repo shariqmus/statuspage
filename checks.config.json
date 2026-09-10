@@ -1,0 +1,10 @@
+{
+  "checks": [
+    {
+      "name": "Museum Website",
+      "url": "https://www.nhmad.ae/",
+      "method": "GET",
+      "expectedStatus": 200
+    }
+  ]
+}
