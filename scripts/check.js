@@ -9,7 +9,11 @@ function getPath(obj, path) {
 async function runCheck(check) {
   const start = Date.now();
   try {
-    const headers = { ...(check.headers || {}) };
+    const headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    ...(check.headers || {}),
+    };
     if (check.authEnv) {
       headers['Authorization'] = process.env[check.authEnv] || '';
     }
