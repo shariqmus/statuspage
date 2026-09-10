@@ -2,7 +2,7 @@
   "checks": [
     {
       "name": "Museum Website",
-      "url": "https://www.nhmad.ae/",
+      "url": "https://www.shariq.site/",
       "method": "GET",
       "expectedStatus": 200
     }
