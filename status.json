@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-11-19T00:46:24.275Z",
+  "updatedAt": "2026-11-19T08:01:03.475Z",
   "services": [
     {
       "name": "Museum Website",
       "status": "operational",
       "httpStatus": 200,
-      "latencyMs": 937,
-      "lastChecked": "2026-11-19T00:46:24.274Z"
+      "latencyMs": 902,
+      "lastChecked": "2026-11-19T08:01:03.475Z"
     }
   ]
 }
